@@ -8,20 +8,20 @@ import {createReviewThunk, findReviewsByRecipeThunk} from "../reviews/reviews-th
 import {Link} from "react-router-dom";
 
 const RecipeDetails = () => {
-    const {ID} = useParams()
+    const {cID} = useParams()
     const [review, setReview] = useState('')
     const {reviews} = useSelector((state) => state.reviews)
     const {details} = useSelector((state) => state.recipes)
     const {currentUser} = useSelector((state) => state.users)
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(findRecipeByIdThunk(ID))
-        dispatch(findReviewsByRecipeThunk(ID))
+        dispatch(findRecipeByIdThunk(cID))
+        dispatch(findReviewsByRecipeThunk(cID))
     },[])
     const handlePostReviewBtn = () => {
         dispatch(createReviewThunk({
             review,
-            ID
+            cID
         }))
     }
     return(

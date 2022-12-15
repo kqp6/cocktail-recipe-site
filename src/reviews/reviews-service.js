@@ -11,8 +11,8 @@ export const createReview = async (review) => {
     return response.data
 }
 
-export const findReviewsByRecipe = async (ID) => {
-    const response = await api.get(`${COCKTAIL_REVIEWS_API}/${ID}/reviews`)
+export const findReviewsByRecipe = async (cID) => {
+    const response = await api.get(`${COCKTAIL_REVIEWS_API}/${cID}/reviews`)
     return response.data
 }
 

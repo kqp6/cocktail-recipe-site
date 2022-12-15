@@ -61,7 +61,7 @@ function App() {
                       <Profile/>
                   </ProtectedRoute>
               }/>
-              <Route path="/details/:ID" element={<RecipeDetails/>}/>
+              <Route path="/details/:cID" element={<RecipeDetails/>}/>
               <Route path="/profile/:uid" element={<PublicProfile/>}/>
             </Routes>
           </CurrentUser>
